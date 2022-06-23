@@ -1,0 +1,251 @@
+/* định nghĩa class dùng chung */
+
+.container {
+    max-width: 960px;
+    margin: 0px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+
+/* style css navbar-brand  */
+
+body {
+    font-size: 16px;
+    line-height: 1.15;
+    color: #111;
+}
+
+#header {
+    height: 60px;
+    position: relative;
+}
+
+nav {
+    background: #2c2c32;
+    /* fixed menu  */
+    position: fixed;
+    width: 100%;
+}
+
+#navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+#navbar-brand #logo {
+    max-height: 40px;
+    width: auto;
+}
+
+
+/* style main-menu  */
+
+ul#main-menu {
+    display: flex;
+    list-style: none;
+    /* padding: 10px 0px; */
+    margin-bottom: 0px;
+    display: none;
+}
+
+ul#main-menu li {
+    position: relative;
+}
+
+ul#main-menu a {
+    color: #9d9d9d;
+    display: block;
+    padding: 20px 10px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+ul#main-menu>li:hover>a {
+    color: #fff;
+}
+
+
+/* style sub-menu  */
+
+ul#main-menu ul.sub-menu {
+    position: absolute;
+    left: 0px;
+    top: 59px;
+    width: 220px;
+    list-style: none;
+    padding: 15px 15px;
+    background: #333;
+    display: none;
+}
+
+
+/* xử lý hover ẩn hiện sub menu  */
+
+ul#main-menu li:hover ul.sub-menu {
+    display: block;
+}
+
+ul#main-menu ul.sub-menu a {
+    padding: 8px 15px;
+}
+
+ul#main-menu ul.sub-menu li:hover a {
+    color: #fff;
+}
+
+
+/* style css download button  */
+
+#download {
+    background-color: #0e7bd3;
+    font-weight: bold;
+    color: #fff;
+    padding: 20px 30px;
+    text-decoration: none;
+    position: relative;
+    display: none;
+}
+
+#download:hover {
+    background: #005ba4;
+}
+
+#download::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f063";
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+}
+
+
+/* navbar toggle  */
+
+#navbar-toggle {
+    font-size: 24px;
+    color: #fff;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+
+/* style wp-content  */
+
+#wp-content {
+    /* padding: 40px 0px; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#wp-content h1 {
+    margin-bottom: 20px;
+}
+
+
+/* responsive menu  */
+
+ul#responsive-menu {
+    position: absolute;
+    padding-left: 0px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    list-style: none;
+    left: 0;
+    top: 60px;
+    /* background-color: #3c3c43; */
+    background-color: #2f2f35;
+    width: 100%;
+    display: none;
+}
+
+ul#responsive-menu li {
+    position: relative;
+    border: 1px solid #3d3d43;
+}
+
+ul#responsive-menu li:last-child {
+    border: none;
+}
+
+ul#responsive-menu a {
+    color: #9d9d9d;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+ul#responsive-menu ul.sub-menu {
+    background: #38383d;
+    list-style: none;
+    padding: 5px 20px;
+    display: none;
+}
+
+ul#responsive-menu>li:hover>a,
+ul#responsive-menu ul.sub-menu li:hover a {
+    color: #fff;
+}
+
+
+/* responsive menu toggle  */
+
+ul#responsive-menu .responsive-menu-toggle {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: #fff;
+    font-size: 16px;
+    padding: 11px 15px;
+    cursor: pointer;
+}
+
+ul#responsive-menu .responsive-menu-toggle.open {
+    transform: rotate(180deg);
+}
+
+
+/* small devices (landscape phones, 576px and up) */
+
+@media (min-width:576px) {}
+
+
+/* medium devices ( tablets, 768px and up) */
+
+@media (min-width:768px) {}
+
+
+/* large devices (desktops. 992px and up) */
+
+@media (min-width:992px) {
+    #download {
+        display: block;
+    }
+    ul#main-menu {
+        display: flex;
+    }
+    #navbar-toggle {
+        display: none;
+    }
+}
+
+
+/* extra large devices (large desktops, 1200px and up) */
+
+@media (min-width:1200px) {}
